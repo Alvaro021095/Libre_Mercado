@@ -1,0 +1,9 @@
+description = 'driven adapter: reactive rest consumer'
+
+dependencies {
+	compile project(':model')
+    implementation project(':helpers-reactive-repository-commons')
+    // Use JUnit test framework
+    testImplementation libs.unit_tests
+    implementation libs.spring_boot
+}

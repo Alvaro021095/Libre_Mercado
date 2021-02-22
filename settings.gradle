@@ -1,0 +1,19 @@
+rootProject.name = 'ProjectBase'
+
+include ':app-service'
+include ':model'
+include ':usecase'
+include ':reactive-web'
+include ':reactive-rest-consumer'
+include ':helpers-reactive-repository-commons'
+
+project(':app-service').projectDir = file('./applications/app-service')
+project(':model').projectDir = file('./domain/model')
+project(':usecase').projectDir = file('./domain/usecase')
+project(':reactive-web').projectDir = file('./infrastructure/entry-points/reactive-web')
+project(':reactive-rest-consumer').projectDir = file('./infrastructure/driven-adapters/reactive-rest-consumer')
+project(':helpers-reactive-repository-commons').projectDir = file('./infrastructure/helpers/reactive-repository-commons')
+
+
+
+

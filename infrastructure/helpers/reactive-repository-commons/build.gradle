@@ -1,0 +1,8 @@
+description = 'helpers: reactive repository commons'
+
+
+dependencies {
+    compile project(':model')
+    implementation libs.spring_boot
+
+}

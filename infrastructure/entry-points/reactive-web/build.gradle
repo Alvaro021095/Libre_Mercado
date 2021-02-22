@@ -1,0 +1,11 @@
+description = 'driven adapter: entry points'
+
+dependencies {
+
+    compile project(':usecase')
+    implementation libs.spring_boot
+    implementation project(':helpers-reactive-repository-commons')
+    implementation libs.entry_point
+
+
+}

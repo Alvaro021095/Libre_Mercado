@@ -1,0 +1,7 @@
+description = 'Modelo: Entidades del proyecto'
+
+dependencies {
+
+    implementation libs.api_validation
+
+}

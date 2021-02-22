@@ -1,0 +1,40 @@
+description = "Wires the application together."
+
+// configure spring boot with gradle: start
+apply plugin: 'application'
+apply plugin: 'org.springframework.boot'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
+}
+
+apply plugin: "io.spring.dependency-management"
+
+dependencies {
+    compile project(":usecase")
+    compile project(":reactive-web")
+    compile project(":reactive-rest-consumer")
+    compile project(":helpers-reactive-repository-commons")
+    //Dependencias
+    implementation libs.spring_boot
+
+    // Use JUnit test framework
+    testImplementation libs.unit_tests
+
+}
+
+
+jar {
+    archivesBaseName = rootProject.name
+    libsDirName = project(":").getBuildDir()
+}
+
+application {
+    // Define the main class for the application.
+    mainClassName = 'co.com.colombia.api.MainApplication'
+}
