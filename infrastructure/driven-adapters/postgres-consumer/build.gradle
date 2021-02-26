@@ -1,0 +1,9 @@
+description = 'driven adapter: postgres consumer'
+
+dependencies {
+	compile project(':model')
+    implementation project(':helpers-reactive-repository-commons')
+
+    implementation libs.spring_boot
+
+}

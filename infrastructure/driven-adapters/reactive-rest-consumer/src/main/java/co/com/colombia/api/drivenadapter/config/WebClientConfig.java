@@ -1,4 +1,4 @@
-package co.com.colombia.api;
+package co.com.colombia.api.drivenadapter.config;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.ssl.SslContext;
