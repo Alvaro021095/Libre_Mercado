@@ -1,4 +1,4 @@
-description = "Orquestador Recharges"
+description = "Orquestador"
 
 buildscript {
   ext {

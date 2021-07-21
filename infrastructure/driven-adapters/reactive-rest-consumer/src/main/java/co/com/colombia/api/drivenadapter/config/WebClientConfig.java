@@ -1,4 +1,4 @@
-package co.com.colombia.api;
+package co.com.colombia.api.drivenadapter.config;
 
 import io.netty.channel.ChannelOption;
 import io.netty.handler.ssl.SslContext;
@@ -35,7 +35,7 @@ public class WebClientConfig {
                                         connect.addHandlerLast(new ReadTimeoutHandler(10000,
                                                 TimeUnit.MILLISECONDS));}}));
 
-        return WebClient.builder().baseUrl("").clientConnector(new ReactorClientHttpConnector(httpClient)).build();
+        return WebClient.builder().baseUrl("https://dummy-productos.getsandbox.com:443").clientConnector(new ReactorClientHttpConnector(httpClient)).build();
     }
 
 

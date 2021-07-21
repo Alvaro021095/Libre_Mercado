@@ -1,7 +1,8 @@
 package co.com.colombia.api;
 
-import co.com.colombia.api.model.prueba.PruebaGateway;
-import co.com.colombia.api.usecase.prueba.PruebaUseCase;
+import co.com.colombia.api.model.mdm.RedisMdmGateway;
+import co.com.colombia.api.model.products.gateway.ProductGateway;
+import co.com.colombia.api.usecase.prueba.ProductUseCase;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,11 +10,8 @@ import org.springframework.context.annotation.Configuration;
 public class UseCaseConfig {
 
 	@Bean
-	public PruebaUseCase pruebaUseCase(PruebaGateway pruebaGateway) {
-		return new PruebaUseCase(pruebaGateway);
+	public ProductUseCase productUseCase(ProductGateway productGateway, RedisMdmGateway redisMdmGateway) {
+		return new ProductUseCase(productGateway, redisMdmGateway);
 	}
-
-
-	
 
 }
