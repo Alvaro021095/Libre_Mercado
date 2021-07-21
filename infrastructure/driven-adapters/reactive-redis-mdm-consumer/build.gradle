@@ -1,0 +1,12 @@
+description = 'driven adapter: redis'
+
+dependencies {
+
+	compile project(':model')
+	
+    // Use JUnit test framework
+
+    //testImplementation libs.unit_tests
+    //Use Redis
+    implementation libs.redis
+}

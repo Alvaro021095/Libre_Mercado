@@ -7,7 +7,7 @@ subprojects {
 		mavenCentral()
     }
 
-    sourceCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_1_8
 
     jacocoTestReport {
         sourceSets sourceSets.main
@@ -97,6 +97,9 @@ subprojects {
 			"org.mockito:mockito-core:2.8.9",
 			"org.powermock:powermock-module-junit4:1.6.4",
 			"junit:junit:4.12"
+        ],
+        redis: [
+                "org.springframework.boot:spring-boot-starter-data-redis-reactive"
         ]
     ]
 }

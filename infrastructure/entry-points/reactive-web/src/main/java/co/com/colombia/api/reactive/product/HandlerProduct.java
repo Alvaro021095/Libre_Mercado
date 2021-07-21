@@ -1,7 +1,7 @@
-package co.com.colombia.api.reactive.prueba;
+package co.com.colombia.api.reactive.product;
 
-import co.com.colombia.api.model.prueba.PruebaResponse;
-import co.com.colombia.api.usecase.prueba.PruebaUseCase;
+import co.com.colombia.api.model.products.ResponseProducts;
+import co.com.colombia.api.usecase.prueba.ProductUseCase;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -11,18 +11,18 @@ import reactor.core.publisher.Mono;
 
 @Component
 @AllArgsConstructor
-public class HandlerPrueba {
+public class HandlerProduct {
 
-    private PruebaUseCase balanceUseCase;
+    private ProductUseCase balanceUseCase;
 
-    public Mono<ServerResponse> getTest(ServerRequest request) {
+    public Mono<ServerResponse> getAllProducts(ServerRequest request) {
 
-        Mono<PruebaResponse> result = balanceUseCase.getTest();
+        Mono<ResponseProducts> result = balanceUseCase.getAllProduct();
 
         return ServerResponse
                 .ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(result, PruebaResponse.class);
+                .body(result, ResponseProducts.class);
 
     }
 
